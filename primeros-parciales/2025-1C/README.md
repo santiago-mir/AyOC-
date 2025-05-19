@@ -1,4 +1,3 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/HQiE2j1m)
 # Primer parcial - Arquitectura y Organización del Computador
 ### Primer cuatrimestre 2025
 
@@ -16,17 +15,8 @@
 
 
 
-# Normas generales y modalidad de entrega
 
-- El parcial es **INDIVIDUAL**
-- Una vez terminada la evaluación se deberá crear un PR a `main` con la branch con la resolución como source.
-- Deben informar su entrega en el siguiente formulario, enviando el link al PR con sus cambios finales y los tests corridos (ver sección [Verificación de tests](#verificación-de-tests)):
 
-https://docs.google.com/forms/d/e/1FAIpQLScbzZoXGJbg1NdZBH13Jv22zrO0VEYVjf6Cm-jS3s_EEtypcQ/viewform?usp=sharing
-
-> [!CAUTION]
-> Es importante que no modifiquen los archivos de los tester, si lo hacen se nos advertirá y tendremos que desaprobar la entrega automáticamente.
-> 
 > **No se deben modificar manualmente:**
 > - las carpetas test_utils y .github
 > - los archivos tester.sh, test.c y test_ej2.c

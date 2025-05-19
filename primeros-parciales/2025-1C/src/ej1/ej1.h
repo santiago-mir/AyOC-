@@ -2,19 +2,21 @@
 #include <stdbool.h>
 #include <stdint.h>
 
-typedef struct {
-	char ability_name[10]; //asmdef_offset:DIRENTRY_NAME_OFFSET
-	void* ability_ptr; //asmdef_offset:DIRENTRY_PTR_OFFSET
-} directory_entry_t; //asmdef_size:DIRENTRY_SIZE
+typedef struct
+{
+	char ability_name[10]; // asmdef_offset:DIRENTRY_NAME_OFFSET 0
+	void *ability_ptr;	   // asmdef_offset:DIRENTRY_PTR_OFFSET 16
+} directory_entry_t;	   // asmdef_size:DIRENTRY_SIZE 24
 
-typedef directory_entry_t** directory_t;
+typedef directory_entry_t **directory_t;
 
-typedef struct {
-	directory_t __dir; //asmdef_offset:FANTASTRUCO_DIR_OFFSET
-	uint16_t __dir_entries; //asmdef_offset:FANTASTRUCO_ENTRIES_OFFSET
-	void* __archetype; //asmdef_offset:FANTASTRUCO_ARCHETYPE_OFFSET
-	bool face_up; //asmdef_offset:FANTASTRUCO_FACEUP_OFFSET
-} fantastruco_t; //asmdef_size:FANTASTRUCO_SIZE
+typedef struct
+{
+	directory_t __dir;		// asmdef_offset:FANTASTRUCO_DIR_OFFSET 0
+	uint16_t __dir_entries; // asmdef_offset:FANTASTRUCO_ENTRIES_OFFSET 8
+	void *__archetype;		// asmdef_offset:FANTASTRUCO_ARCHETYPE_OFFSET 16
+	bool face_up;			// asmdef_offset:FANTASTRUCO_FACEUP_OFFSET 24
+} fantastruco_t;			// asmdef_size:FANTASTRUCO_SIZE 32
 
 /**
  * Marca el ejercicio 1A como hecho (`true`) o pendiente (`false`).
@@ -35,14 +37,14 @@ extern bool EJERCICIO_1B_HECHO;
 /**
  * OPCIONAL: implementar en C
  */
-void init_fantastruco_dir(fantastruco_t* card);
+void init_fantastruco_dir(fantastruco_t *card);
 
 /**
  * OPCIONAL: implementar en C
  */
-fantastruco_t* summon_fantastruco();
+fantastruco_t *summon_fantastruco();
 
 // Funciones ya provistas
-void sleep(void* card);
-void wakeup(void* card);
-directory_entry_t* create_dir_entry(char* ability_name, void* ability_ptr);
+void sleep(void *card);
+void wakeup(void *card);
+directory_entry_t *create_dir_entry(char *ability_name, void *ability_ptr);
