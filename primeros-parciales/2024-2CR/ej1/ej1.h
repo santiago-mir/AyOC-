@@ -10,11 +10,12 @@
  *   - combustible:    La cantidad de combustible disponible de la unidad.
  *   - references:     La cantidad de referencias a la unidad en el mapa.
  */
-typedef struct {
-	char clase[11];
-	uint16_t combustible;
-	uint8_t references;
-} attackunit_t;
+typedef struct
+{
+	char clase[11];		  // 0
+	uint16_t combustible; // 12
+	uint8_t references;	  // 14
+} attackunit_t;			  // 16
 
 typedef attackunit_t *mapa_t[255][255];
 
@@ -45,14 +46,14 @@ extern bool EJERCICIO_1C_HECHO;
 /**
  * OPCIONAL: implementar en C
  */
-void optimizar(mapa_t mapa, attackunit_t* compartida, uint32_t (*fun_hash)(attackunit_t*));
+void optimizar(mapa_t mapa, attackunit_t *compartida, uint32_t (*fun_hash)(attackunit_t *));
 
 /**
  * OPCIONAL: implementar en C
  */
-uint32_t contarCombustibleAsignado(mapa_t mapa, uint16_t (*fun_combustible)(char*));
+uint32_t contarCombustibleAsignado(mapa_t mapa, uint16_t (*fun_combustible)(char *));
 
 /**
  * OPCIONAL: implementar en C
  */
-void modificarUnidad(mapa_t mapa, uint8_t x, uint8_t y, void (*modificar_t)(attackunit_t*));
+void modificarUnidad(mapa_t mapa, uint8_t x, uint8_t y, void (*modificar_t)(attackunit_t *));
